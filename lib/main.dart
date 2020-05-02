@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Expense App',
+      title: 'My Tasks',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.amber,
@@ -43,18 +43,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-    // Transaction(
-    //   amount: 680,
-    //   dateTime: DateTime.now(),
-    //   id: 't1',
-    //   title: 'Denims',
-    // ),
-    // Transaction(
-    //   amount: 300,
-    //   dateTime: DateTime.now(),
-    //   id: 't2',
-    //   title: 'Snacks',
-    // ),
+ 
   ];
 
   void _addNewTransactions(String title, double amount) {
@@ -84,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Expense App',
+            'My Tasks',
             style: TextStyle(fontFamily: 'Open Sans'),
           ),
           actions: <Widget>[
@@ -99,14 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
-                width: double.infinity,
-                child: Card(
-                  color: Colors.blue,
-                  child: Text('CHART!'),
-                  elevation: 5,
-                ),
-              ),
+             
               TransactionList(_userTransactions),
             ],
           ),

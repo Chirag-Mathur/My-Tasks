@@ -39,7 +39,7 @@ class _NewTransactionState extends State<NewTransaction> {
           children: <Widget>[
             TextField(
               decoration: InputDecoration(
-                labelText: 'Article',
+                labelText: 'Task',
               ),
               onSubmitted: (_) => submitted(),
               controller: titleController,
@@ -47,14 +47,14 @@ class _NewTransactionState extends State<NewTransaction> {
             ),
             TextField(
               decoration: InputDecoration(
-                labelText: 'Cost',
+                labelText: 'Time(in minutes)',
               ),
               controller: amountController,
               keyboardType: TextInputType.number,
               onSubmitted: (_) => submitted(),
             ),
             FlatButton(
-              child: Text('Add Transaction'),
+              child: Text('Add Task'),
               textColor: Colors.purple,
               onPressed: () => submitted,
             )

@@ -13,7 +13,7 @@ class TransactionList extends StatelessWidget {
       child: _userTransactions.isEmpty
           ? Column(children: <Widget>[
               Text(
-                'No Transactions',
+                'No Task',
                 style: Theme.of(context).textTheme.title,
               ),
               SizedBox(
@@ -45,7 +45,7 @@ class TransactionList extends StatelessWidget {
                         ),
                         padding: EdgeInsets.all(10),
                         child: Text(
-                          'Rs.${_userTransactions[index].amount.toStringAsFixed(2)}',
+                          '${_userTransactions[index].amount.toStringAsFixed(0)}'+' Minutes',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
